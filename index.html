@@ -1,0 +1,206 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #333333;
+            margin: 22px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        <p style="color: #dedede; margin: 22px;">Transmat</p>
+    </h1>
+    <p style="color: #dedede; margin: 22px; width: 50rem;">An accessibility tool for quick text-chat-based callouts
+        while
+        playing Destiny 2 on console platforms like Xbox and Playstation.</p>
+    <p style="color: #dedede; margin: 22px; width: 50rem;">Using an Android phone or tablet supporting Bluetooth LE
+        (which most
+        modern phones and tablets do) and a $30 <a style="color: #dedede"
+            href="https://www.adafruit.com/product/2829">Adafruit Feather 32u4 Bluefruit
+            LE</a> connected to your Xbox or Playstation console, Transmat allows you to set up quick single-press
+        buttons on your Android device that can send abitrary text strings to Destiny 2's
+        text chat as if you typed them on a physical keyboard.</p>
+    <p style="color: #dedede; margin: 22px; width: 50rem;">Ideal for when you need to quickly transmit pre-defined
+        information to your fireteam in activities such as raids but voice chat is not an option for everyone in the
+        fireteam. Much easier than trying to juggle a controller and a physical keyboard while actively playing!</p>
+
+    <iframe style="margin: 22px" width="560" height="315" src="https://www.youtube.com/embed/V8M7467fAM4" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+    <p style="color: #dedede; margin: 22px; width: 50rem;">It comes pre-configured with callouts for the Vow of the
+        Disciple raid but you can also create your own custom callout pages for other raids or activities where
+        information needs to be communicated in a timely fashion.</p>
+    <p style="color: #dedede; margin: 22px; width: 50rem;">Currently only characters that exist on a US layout keyboard
+        are supported. If anyone is interested in using a system like this with non-English languages please let me know
+        and I can look into improving localization support, it just isn't something I have needed for my own usage thus
+        far.</p>
+    <hr>
+    <p style="color: #dedede; margin: 22px; width: 50rem;">Transmat is Open Source. You can find the Android app code <a
+            style="color: #dedede" href="https://github.com/gmcbay/Transmat_Android">here</a> and
+        the Adafruit Feather 32u4 Bluefruit
+        LE code <a style="color: #dedede" href="https://github.com/gmcbay/Transmat_32u4">here</a> </p>
+
+    <hr>
+    <p style="color: #dedede; font-weight: bold; margin: 22px;">Setup - Android</p>
+    <p style="color: #dedede; margin: 22px; width: 50rem;">Install Transmat from the Google Play Store (if Google Play
+        is available on
+        your Android device). You can find it <a style="color: #dedede"
+            href="https://play.google.com/store/apps/details?id=net.mcbay.transmat">here</a>.</p>
+    <p style="color: #dedede; margin: 22px; width: 50rem;">If using an Android device (such as an Amazon Fire Tablet)
+        that
+        does not have Google Play Store access, you can sideload the Transmat application.
+        Instructions for how to set up sideloading vary from device to device but you should be able to find information
+        for your specific Android device
+        using a web search for 'sideload apk (your-device-here)', for example <a style="color: #dedede"
+            href="https://www.google.com/search?q=sideload+apk+fire+hd+7">'sideload apk fire hd 7'</a></p>
+    <p style="color: #dedede; margin: 22px; width: 50rem;">If sideloading you can find the current version of the
+        Android app apk <a style="color: #dedede" href="https://github.com/gmcbay/Transmat_Android/releases/download/Release%2Fv1.0.0/app-release.apk">here</a></p>
+    <hr>
+    <p style="color: #dedede; font-weight: bold; margin: 22px;">Acquire - Adafruit Feather 32u4 Bluefruit LE</p>
+    <p style="color: #dedede; margin: 22px; width: 50rem;">You probably do not have an Adafruit Feather 32u4 Bluefruit
+        LE device laying around already, so you'll likely have to buy one. These are small Arduino-compatible devices
+        that
+        support Bluetooth LE and use the ATmega32U4 processor which is particularly well suited for impersonating a
+        physical USB keyboard. The best
+        place to buy them is direct from Adafruit <a style="color: #dedede"
+            href="https://www.adafruit.com/product/2829">here</a></a></p>
+    <p style="color: #dedede; margin: 22px; width: 50rem;">There are other variants of the Adafruit Feather device but
+        this project requires the 32u4 version (to act as a virtual USB keyboard) with
+        Bluetooth LE support so make sure the Adafruit Feather 32u4 Bluefruit LE device is the one you purchase. If you
+        only plan to use this device for Transmat, go ahead and buy the cheapest option
+        labelled "Loose Headers - Soldering Required". Don't panic (if you aren't into electronics): This project does
+        not actually use the IO pins on the Adafruit Feather 32u4 Bluefruit LE device
+        so despite the description no soldering will actually be required.</p>
+    <p style="color: #dedede; margin: 22px; width: 50rem;">If you are in a rush and have Amazon Prime you can also
+        choose to buy the device from Amazon <a style="color: #dedede"
+            href="https://www.amazon.com/dp/B01GJR9MNI">here</a>.</p>
+    <p style="color: #dedede; margin: 22px; width: 50rem;">You will also need a USB A (male) to Micro B (male) cable.
+        You may have one of these already. If not you can buy one while buying the Adafruit Feather 32u4 Bluefruit LE
+        either at <a style="color: #dedede" href="https://www.adafruit.com/product/592">Adafruit</a> or <a
+            style="color: #dedede" href="https://www.amazon.com/dp/B07232M876">Amazon</a>. The exactly length of the
+        cable is not
+        important as long as it supports USB A male on one side (this side will plug into your console's USB port) and
+        USB Micro B on the other side (this side will plug into the Adafruit device).
+        <hr>
+    <p style="color: #dedede; font-weight: bold; margin: 22px;">Setup - Adafruit Feather 32u4 Bluefruit LE</p>
+    <p style="color: #dedede; margin: 22px; width: 50rem;">Once you have the Adafruit Feather 32u4 Bluefruit LE device
+        and the correct USB cable you will need to do a one-time setup using a PC (Windows or Linux) or Mac to write
+        the Transmat firmware to this device. After the firmware is written to the device you won't need the PC or Mac
+        anymore, so if you don't currently have your own PC or Mac this may be something you can do at school, work or
+        on a friend's computer.</p>
+
+    <ul>
+        <li style="color: #dedede">To get started plug the Adafruit Feather 32u4 Bluefruit LE device into the PC or Mac
+            using the USB A to Micro B cable.<br />Plug the USB-A end into your PC or Mac and the Micro B end into the
+            MicroUSB port of the Adafruit Feather 32u4
+            Bluefruit LE device.<br />If things are connected and the device is getting power from the USB cord you
+            should see a red LED light flashing on the device. This is good.</a></li>
+        <br />
+        <li style="color: #dedede">Download and install the Arduino IDE from <a style="color: #dedede"
+                href="https://www.arduino.cc/en/software">here</a> and start the Arduino IDE</li>
+        <br />
+        <li style="color: #dedede">Select the File -> Preferences menu</li>
+        <br />
+        <img src="img/pref.png">
+        <br />&nbsp;<br />
+        <li style="color: #dedede">When the Preferences dialog box pops up, find the area for inserting "Additional
+            Boards Manager URLs"</li>
+        <br />
+        <img src="img/pref_dlg.png">
+        <br />&nbsp;<br />
+        <li style="color: #dedede">Cut and paste this URL into that text area: <code
+                style="background-color: #666666;">https://adafruit.github.io/arduino-board-index/package_adafruit_index.json</code>
+        </li>
+        <br />
+        <li style="color: #dedede">Click OK to dismiss the Preferences dialog.</li>
+        <br />
+        <li style="color: #dedede">Select the Tools->Board->Boards Manager... menu</li>
+        <br />
+        <img src="img/board_mgr_menu.png">
+        <br />&nbsp;<br />
+        <li style="color: #dedede">When the Boards Manager dialog pops up, cut and paste this into the search box text
+            area up top as shown: <code style="background-color: #666666;">adafruit feather 32u4</code><br />
+            This will filter the list of boards to install support for to just show the one we are interested in (seen
+            in screenshot).</li>
+        <br />
+        <img src="img/board_mgr.png">
+        <br />&nbsp;<br />
+        <li style="color: #dedede">Click the Install button next to the version number in the bottom right corner to
+            begin installing support for the Adafruit Feather 32u4 board.</li>
+        <br />
+        <li style="color: #dedede">After the Board Manager has installed support for the Adafruit Feather 32u4 board it
+            is recommended you close & restart the Arduino IDE program to make sure everything is properly loaded.</li>
+        <br />
+        <li style="color: #dedede">Select the Adafruit Feather 32u4 Board from the Tools->Board->Adafruit
+            Boards->Adafruit Feather 32u4 menu as shown</li>
+        <br />
+        <img src="img/board_sel.png">
+        <br />&nbsp;<br />
+        <li style="color: #dedede">Now select the serial port to use from the Tools->Port menu.<br />If everything
+            worked
+            correctly up to this point the IDE should recognize the Adafruit Feather 32u4 on one of the available serial
+            ports and display the board information after the port name (as seen in below screenshot).<br />
+            Make sure to choose the serial port that has the Adafruit Feather 32u4 device attached, it may not be COM5
+            on your system!</li>
+        <br />
+        <img src="img/port.png">
+        <br />&nbsp;<br />
+        <li style="color: #dedede">Download the Transmat firmware code from <a style="color: #dedede"
+                href="https://github.com/gmcbay/Transmat_32u4/releases/download/1.0/transmat_32u4.zip">here</a>. Unzip
+            the file to a local directory.</li>
+        <br />
+        <li style="color: #dedede">Select the File->Open menu in the Arduino IDE</li>
+        <br />
+        <img src="img/open.png">
+        <br />&nbsp;<br />
+        <li style="color: #dedede">Use the open file dialog to navigate to the directory where you unzipped the code
+            above and select the transmat_32u4.ino file inside.</li>
+        <br />
+        <img src="img/open_dlg.png">
+        <br />&nbsp;<br />
+        <li style="color: #dedede">This will open the Transmat firmware project in its own new IDE window.<br />You
+            should now be ready to write the firmware.
+            <br />In the IDE window that opened with the Transmat firmware project click the upload button (looks like
+            an
+            arrow pointing right) in the top left corner of the Arduino IDE.
+        </li>
+        <br />
+        <img src="img/upload.png">
+        <br />&nbsp;<br />
+        <li style="color: #dedede">You should see some output at the bottom of the IDE window as the IDE compiles and
+            uploads the code to the device.<br />If everything works correctly you should
+            eventually see a "Done uploading." message.<br />If the upload fails for any reason the first time, try
+            again. If it continues to fail feel free to contact me at george@mcbay.net and I will attempt to help you
+            figure it out.</li>
+        <br />
+        <img src="img/done.png">
+        <br />&nbsp;<br />
+        <li style="color: #dedede">Once the firmware is done uploading you can unplug the Adafruit device from the PC or
+            Mac you are using and use the USB cable to plug the device into a USB port on your Xbox or Playstation
+            console.<br />&nbsp;<br />
+            A case is not required for the Adafruit Feather 32u4 Bluefruit LE but if you'd like one, Adafruit has 3D
+            printable
+            files on <a style="color: #dedede"
+                href="https://www.thingiverse.com/thing:2209964/files">Thingiverse</a><br />
+            They offer a lot of case variations but the two files you'd generally want to use for this project are
+            feather-case.stl for the main case bottom and feather-top.stl for the top of the case.<br />
+            <br />
+            At this point you should be ready to connect the Android app to the device.<br />&nbsp;<br />Run the Android
+            app on your
+            Android phone or tablet and click the Bluetooth icon in the upper-right corner to attempt to
+            connect.<br />&nbsp;<br />
+            The first time you attempt to connect you will have to answer some prompts to give the app access to
+            Bluetooth LE.<br />&nbsp;<br />
+            In order to access Bluetooth LE the app requires location access on older versions of Android, this is
+            normal.
+            <br />&nbsp;<br />The app doesn't store or transmit any location data.<br />&nbsp;<br />
+            Once connected you can send your callouts!
+        </li>
+    </ul>
+</body>
+
+</html>
